@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Google Meet</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./logo_meet_2020q4_color_1x_web_32dp.png"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="wrapper_user">
+          <div class="user_info-img">
+            <div class="user_img">
+              <img
+                src="https://1.bp.blogspot.com/-O5nkWm_-iuw/WZ2taF_2BeI/AAAAAAAABgo/0UrhPLffE2sybFg1edAttAFdKt65mqjzACEwYBhgL/s200/Mangeky%25C5%258D_Sharingan_Sasuke_%2528Eternal%2529.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="control_user">
+            <div class="header_control">
+              <h2>Mọi người</h2>
+              <div>
+                <span class="iconClose"
+                  ><button
+                    class="material-icons"
+                    onclick="closeModal('control_user')"
+                  >
+                    close
+                  </button></span
+                >
+              </div>
+            </div>
+            <div class="tool_control">
+              <div class="tool tool_mute">
+                <span class="material-icons"> mic_off</span>
+                <p class="text_control">Đã tắt tiếng của tất cả</p>
+              </div>
+              <div class="tool tool_adduser">
+                <span class="material-icons"> person_add_alt_1 </span>
+                <p class="text_control">Thêm Người</p>
+              </div>
+              <div class="tool tool_addmin">
+                <span class="material-icons"> toggle_on </span>
+                <p class="text_control">Bảng điều khiển của người tổ chức</p>
+              </div>
+            </div>
+            <div class="control_input">
+              <div class="input_search">
+                <span class="material-icons"> search </span>
+                <input type="text" placeholder="Tìm kiếm người" />
+              </div>
+            </div>
+            <p class="personIncall">Trong Cuộc gọi</p>
+            <div class="control_person">
+              <div class="person_call">
+                <div class="info">
+                  <div class="img_person">
+                    <img
+                      src="https://1.bp.blogspot.com/-O5nkWm_-iuw/WZ2taF_2BeI/AAAAAAAABgo/0UrhPLffE2sybFg1edAttAFdKt65mqjzACEwYBhgL/s200/Mangeky%25C5%258D_Sharingan_Sasuke_%2528Eternal%2529.png"
+                      alt="person"
+                    />
+                  </div>
+                  <div class="person_info">
+                    <p>Nguyễn Văn A</p>
+                    <p>Nguời tổ chức cuộc họp</p>
+                  </div>
+                </div>
+                <div class="person_icon">
+                  <span class="material-icons"> mic_off </span>
+                  <span class="material-icons"> push_pin </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tool_icon">
+          <div class="date_time">
+            <span>9:20</span>
+            <span class="code_datetime">zyk-ynsp-kez</span>
+          </div>
+          <div class="icon_control">
+            <span>
+              <button
+                class="mic_on material-icons"
+                onclick="toggleFunction('mic','mic_off','.mic_on')"
+              >
+                mic
+              </button>
+            </span>
+            <span>
+              <button
+                class="material-icons video_on"
+                onclick="toggleFunction('videocam','videocam_off','.video_on')"
+              >
+                videocam
+              </button>
+            </span>
+
+            <span>
+              <button class="material-icons">present_to_all</button>
+            </span>
+            <span>
+              <button class="material-icons">more_vert</button>
+            </span>
+            <span id="call_end">
+              <button class="material-icons">call_end</button>
+            </span>
+          </div>
+          <div class="icon_user">
+            <span>
+              <button class="material-icons">info</button>
+            </span>
+            <span>
+              <button class="material-icons test_hover">group</button>
+            </span>
+            <span>
+              <button class="material-icons">chat</button>
+            </span>
+            <span>
+              <button class="material-icons">category</button>
+            </span>
+            <span>
+              <button class="material-icons">gpp_good</button>
+            </span>
+            <span>
+              <button class="material-icons">keyboard_arrow_up</button>
+            </span>
+          </div>
+        </div>
+        <div class="ready_meet">
+          <div class="meet_content">
+            <h2>Cuộc họp đã sẵn sàng</h2>
+            <span class="iconClose">
+              <button class="material-icons" onclick="closeModal('ready_meet')">
+                close
+              </button>
+            </span>
+          </div>
+          <div class="invite_friend">
+            <button class="add_user">
+              <span class="material-icons"> group_add </span>
+              <span class="text_btn"> Thêm người khác</span>
+            </button>
+            <div class="text_meet">
+              Hoặc chia sẻ đường liên kết của cuộc họp này với những người mà
+              bạn muốn họ tham gia vào cuộc họp
+            </div>
+            <div class="url_meeting">
+              <div>meet.google.com/ird-wkud-mza</div>
+              <span class="material-icons"> content_copy </span>
+            </div>
+            <div class="user_url">
+              <span class="material-icons"> admin_panel_settings </span>
+              <p>
+                Những người sử dụng đường liên kết đến cuộc họp này phải được
+                bạn cho phép thì mới có thể tham gia.
+              </p>
+            </div>
+            <div class="join_bymail">
+              Tham gia bằng nguyentinhdn0507@gmail.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
