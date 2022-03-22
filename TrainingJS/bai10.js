@@ -4,27 +4,32 @@ async function waiAndMaybeReject() {
 }
 async function test1() {
   try {
-    return await waiAndMaybeReject(); //
+    return await waiAndMaybeReject();
   } catch (e) {
-    return "oh No !";
+    return "oh No !" + e.message;
   }
 }
 async function test2() {
   try {
-    return await waiAndMaybeReject();
+    return await waiAndMaybeReject(); // dư await
   } catch (e) {
-    throw e;
+    throw error;
   }
+  // thiếu try/catch để bắt lỗi cho hàm main
 }
 async function test3() {
   return await waiAndMaybeReject();
+  // dư await
+  // thiếu try/catch để bắt lỗi cho hàm main
 }
+
 async function test4() {
   return waiAndMaybeReject();
+  // thiếu try/catch để bắt lỗi cho hàm main
 }
 
 const main = async () => {
-  const value = await test1();
+  const value = await test2();
   console.log("value", value);
 };
 main();
